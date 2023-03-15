@@ -1,0 +1,45 @@
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chatBubble {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  max-width: 70%;
+  align-self: flex-start;
+
+  .user {
+    background-color: #2196f3;
+    color: white;
+    align-self: flex-end;
+  }
+
+  .bot {
+    .typing:after {
+      content: '.';
+      animation: typing 1s infinite;
+    }
+  }
+}
+
+@keyframes typing {
+  0% {
+    content: '.';
+  }
+  25% {
+    content: '..';
+  }
+  50% {
+    content: '...';
+  }
+  75% {
+    content: '';
+  }
+}
